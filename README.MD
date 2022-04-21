@@ -2,7 +2,10 @@
 
 Adds a small variety of earthen based building blocks.
 
-Since the original repo is currently no longer maintained, we have decided to re-release the mod with the changes of FreneticScribbler. Thanks to him and Alsender for making such a great mod.
+Since the original repo is unfortunately currently no longer
+maintained, we have decided to re-release the mod with the
+changes of FreneticScribbler. In other words: we let others
+do the work and we stick our name on it :)
 
 ## Credits
 
