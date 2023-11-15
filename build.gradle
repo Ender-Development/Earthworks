@@ -10,7 +10,7 @@ plugins {
     id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
-version = "1.3.7(ED)" // TODO @_MasterEnderman_: Please increment the version as soon as possible. But at the earliest with an actual new release. Use a normal sceme like 1.3.8 
+version = "1.3.8"
 group = "alsender.earthworks" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "earthworks_extended_life"
 
@@ -105,8 +105,8 @@ dependencies {
     // implementation ...
 
     runtimeOnly rfg.deobf("curse.maven:the-one-probe-community-edition-885670:4746213")
-    runtimeOnly rfg.deobf("curse.maven:mantle-74924:2713386")
-    runtimeOnly rfg.deobf("curse.maven:inspirations-284007:2843007")
+    runtimeOnly rfg.deobf("curse.maven:had-enough-items-557549:4810661")
+    runtimeOnly rfg.deobf("curse.maven:groovyscript-687577:4691853")
 }
 
 // Adds Access Transformer files to tasks
