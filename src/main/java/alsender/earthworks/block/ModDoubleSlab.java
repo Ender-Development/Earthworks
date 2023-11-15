@@ -34,7 +34,7 @@ public class ModDoubleSlab extends BlockSlab {
 		String name = "double" + block.getRegistryName().toString().substring(11);
 
 		this.setRegistryName(name);
-		this.setTranslationKey(Earthworks.mod_id + "." + name);
+		this.setTranslationKey(Earthworks.MODID + "." + name);
 		this.slab = block;
 		this.setSoundType(block.getSoundType());
 		this.setHardness(block.getDefaultState().getBlockHardness(null, null));

@@ -33,7 +33,7 @@ public class ShapelessReturnRecipeFactory implements IRecipeFactory {
             throw new JsonParseException("No ingredients for shapeless recipe");
 
         ItemStack itemstack = CraftingHelper.getItemStack(JsonUtils.getJsonObject(json, "result"), context);
-        return new ShapelessReturnRecipes(new ResourceLocation(Earthworks.mod_id, "shapeless_return_crafting"), itemstack, ings);
+        return new ShapelessReturnRecipes(new ResourceLocation(Earthworks.MODID, "shapeless_return_crafting"), itemstack, ings);
     }
 
     public class ShapelessReturnRecipes extends ShapelessOreRecipe {
@@ -47,7 +47,7 @@ public class ShapelessReturnRecipeFactory implements IRecipeFactory {
             NonNullList<ItemStack> nonnulllist = NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStack.EMPTY);
             for (int i = 0; i < nonnulllist.size(); ++i) {
                 ItemStack itemstack = inv.getStackInSlot(i);
-                if (itemstack != null && itemstack.getItem() == Items.FLINT) {
+                if (itemstack.getItem() == Items.FLINT) {
                     int count = itemstack.getCount();
                     nonnulllist.set(i, (itemstack.splitStack(count)));
                 } else {

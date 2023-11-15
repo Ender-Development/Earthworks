@@ -26,7 +26,7 @@ public class ModWall extends BlockWall {
         setHardness(blockHardness);
         setResistance(blockResistance);
 
-        setTranslationKey(Earthworks.mod_id + "." + name);
+        setTranslationKey(Earthworks.MODID + "." + name);
         setRegistryName(name);
         setCreativeTab(Earthworks.creativeTab);
         setDefaultState(this.blockState.getBaseState().withProperty(UP, false).withProperty(NORTH, false).withProperty(EAST, false).withProperty(SOUTH, false).withProperty(WEST, false));

@@ -28,7 +28,7 @@ public class ModSlab extends BlockSlab {
 		super(block.getDefaultState().getMaterial());
 		setHardness(block.getDefaultState().getBlockHardness(world, pos));
 
-		setTranslationKey(Earthworks.mod_id + "." + name);
+		setTranslationKey(Earthworks.MODID + "." + name);
 		setRegistryName(name);
 		setCreativeTab(Earthworks.creativeTab);
 
@@ -41,7 +41,7 @@ public class ModSlab extends BlockSlab {
 		super(Material.WOOD);
 		setHardness(2.0F);
 
-		setTranslationKey(Earthworks.mod_id + "." + name);
+		setTranslationKey(Earthworks.MODID + "." + name);
 		setRegistryName(name);
 		setCreativeTab(Earthworks.creativeTab);
 

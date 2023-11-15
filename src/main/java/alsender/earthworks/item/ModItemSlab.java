@@ -64,7 +64,7 @@ public class ModItemSlab extends ItemBlock {
                     return EnumActionResult.SUCCESS;
                 }
             }
-            return (this.check(stack, world, pos.offset(side)) || (super.onItemUse(player, world, pos, hand, side, hitx, hity, hitz) == EnumActionResult.SUCCESS ? true : false)) ? EnumActionResult.SUCCESS : EnumActionResult.FAIL;
+            return (this.check(stack, world, pos.offset(side)) || (super.onItemUse(player, world, pos, hand, side, hitx, hity, hitz) == EnumActionResult.SUCCESS)) ? EnumActionResult.SUCCESS : EnumActionResult.FAIL;
         }
     }
 

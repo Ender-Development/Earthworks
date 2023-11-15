@@ -28,7 +28,7 @@ public class ModItemTool extends Item {
     public ModItemTool(IForgeRegistry<Item> registry, String name, int durability) {
         setCreativeTab(Earthworks.creativeTab);
         setRegistryName("tool_" + name);
-        setTranslationKey(Earthworks.mod_id + ".tool_" + name);
+        setTranslationKey(Earthworks.MODID + ".tool_" + name);
         registry.register(this);
         this.setMaxDamage(durability);
         this.setMaxStackSize(1);

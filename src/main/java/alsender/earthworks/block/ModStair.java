@@ -21,7 +21,7 @@ public class ModStair extends BlockStairs {
         setHardness(blockHardness);
         setResistance(blockResistance);
 
-        setTranslationKey(Earthworks.mod_id + "." + name);
+        setTranslationKey(Earthworks.MODID + "." + name);
         setRegistryName(name);
         setCreativeTab(Earthworks.creativeTab);
 

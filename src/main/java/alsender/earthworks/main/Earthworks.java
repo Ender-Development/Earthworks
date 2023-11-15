@@ -16,13 +16,12 @@ import org.apache.logging.log4j.Logger;
 /**
  * Created by alsender on 12/12/16.
  */
-@Mod(modid = Earthworks.mod_id, name = Earthworks.name, version = Earthworks.version)
+@Mod(modid = Earthworks.MODID, name = Earthworks.MODNAME)
 
 public class Earthworks {
 
-    public static final String mod_id = "earthworks";
-    public static final String name = "Earthworks";
-    public static final String version = "1.3.7(ED)";
+    public static final String MODID = "earthworks";
+    public static final String MODNAME = "Earthworks";
 
     public static final CreativeTabs creativeTab = (new CreativeTabs("earthworks") {
 

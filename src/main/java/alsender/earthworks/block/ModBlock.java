@@ -24,7 +24,7 @@ public class ModBlock extends Block {
         setHardness(hardness);
         setResistance(resistance);
 
-        setTranslationKey(Earthworks.mod_id + "." + name);
+        setTranslationKey(Earthworks.MODID + "." + name);
         setRegistryName(name);
         setCreativeTab(Earthworks.creativeTab);
 

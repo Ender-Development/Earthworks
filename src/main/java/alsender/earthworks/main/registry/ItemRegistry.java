@@ -77,7 +77,7 @@ public class ItemRegistry {
 
         //  BETTER WITH MODS COMPAT //
 
-        if (Config.betterwithmods == true) {
+        if (Config.betterwithmods) {
             item_dirt = new ModItem(r, "dirt");
             item_sand = new ModItem(r, "sand");
         }
@@ -111,7 +111,7 @@ public class ItemRegistry {
 
         //  BETTER WITH MODS COMPAT //
 
-        if (Config.betterwithmods == true) {
+        if (Config.betterwithmods) {
             ((ModItem)item_dirt).initModel();
             ((ModItem)item_sand).initModel();
         }
