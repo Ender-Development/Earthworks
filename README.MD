@@ -2,7 +2,7 @@
 
 # Embers - Unofficial Extended Life
 
-[![License](https://img.shields.io/github/license/Ender-Development/Earthworks-Extended-Life.svg?label=License)](LICENSE)
+[![License](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-brightgreen)](LICENSE)
 [![Versions](https://img.shields.io/curseforge/game-versions/936489?logo=curseforge&label=Game%20Version)](https://www.curseforge.com/minecraft/mc-mods/earthworks-extended-life)
 [![Downloads](https://img.shields.io/curseforge/dt/936489?logo=curseforge&label=Downloads)](https://www.curseforge.com/minecraft/mc-mods/earthworks-extended-life)
 
