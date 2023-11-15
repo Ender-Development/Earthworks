@@ -1,5 +1,7 @@
 package alsender.earthworks.main;
 
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -13,9 +15,10 @@ public class Config {
 
     public static Configuration config;
 
+    public static String[] binding;
     public static int Cspawn_rate, Cmin_spawn, Cmax_spawn, Cvein_size,
                         Sspawn_rate, Smin_spawn, Smax_spawn, Svein_size;
-    public static boolean quark, persistantplanks, betterwithmods;
+    public static boolean quark, persistantplanks, betterwithmods, default_binding;
 
     public static void init(File configFile) {
             config = new Configuration(configFile);
@@ -23,8 +26,16 @@ public class Config {
     }
 
     public static void load() {
+        config.addCustomCategoryComment("crafting", "Crafting Configs");
         config.addCustomCategoryComment("world","World Gen Configs");
         config.addCustomCategoryComment("compat", "Mod Compatibility Configs");
+
+        default_binding = config.getBoolean("load_default_binding_materials", "crafting", true, "Set this to FALSE to DISABLE the registration of the default binding materials.");
+        binding = config.getStringList("binding_materials", "crafting",new String[]{
+            "minecraft:paper",
+            "ore:treeSapling",
+            "ore:treeLeaves"
+        }, "Which items can be used as binding material in various crafting recipes? Format: modname:itemname or ore:oredict");
 
         Cspawn_rate = config.getInt("chalk_spawn_rate", "world",3,0,42,"Attempts the world generator will make to spawn a CHALK vein per chunk.  Set to 0 to turn off CHALK.");
         Cmin_spawn = config.getInt("chalk_min_spawn","world",48,0,256,"Minimum Y level at which CHALK can spawn.");
@@ -47,7 +58,7 @@ public class Config {
 
     @SubscribeEvent
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equalsIgnoreCase(Earthworks.mod_id)) {
+        if (event.getModID().equalsIgnoreCase(Earthworks.MODID)) {
             load();
         }
     }

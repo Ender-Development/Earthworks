@@ -234,9 +234,8 @@ public class BlockRegistry {
         block_wicker = new ModBlock(r, "block_wicker", Material.WOOD, SoundType.CLOTH, 0.8F, 1.0F);
         block_wood_shingle = new Block_Wood_Shingle(r, "block_wood_shingle",Material.WOOD,SoundType.WOOD,2.0F,3.33F);
 
-        if (!Loader.isModLoaded("quark") || Config.persistantplanks == true) {
+        if (!Loader.isModLoaded("quark") || Config.persistantplanks) {
             block_planks_vert = new Block_Planks_Vert(r, "block_planks_vert", Material.WOOD, SoundType.WOOD, 2.0F, 3.33F);
-            OreDictionary.registerOre("plankWood", block_planks_vert);
         }
 
 //      block_chalk_dust = new Block_ChalkDust();
@@ -473,7 +472,7 @@ public class BlockRegistry {
         
         //  QUARK COMPAT    //
         
-        if (Config.quark == true) {
+        if (Config.quark) {
             block_reed = new ModRotatedPillar(r, "block_reed", Material.GRASS, SoundType.CLOTH, 0.8F, 1.0F);
             block_thatch = new ModRotatedPillar(r, "block_thatch", Material.GRASS, SoundType.CLOTH, 0.8F, 1.0F);
 
@@ -507,7 +506,7 @@ public class BlockRegistry {
         r.register(itemblock(block_gabion2));
         r.register(itemblock(block_mud));
 
-        if (!Loader.isModLoaded("quark") || Config.persistantplanks == true){
+        if (!Loader.isModLoaded("quark") || Config.persistantplanks){
             r.register(new BlockItemPlanksVert(block_planks_vert).setRegistryName(block_planks_vert.getRegistryName()));
         }
 
@@ -676,7 +675,7 @@ public class BlockRegistry {
         
         //  QUARK COMPAT    //
 
-        if (Config.quark == true) {
+        if (Config.quark) {
             r.register(itemblock(block_reed));
             r.register(itemblock(block_thatch));
             itemslab_reed = new ModItemSlab(r, slab_reed, doubleslab_reed);
@@ -728,7 +727,7 @@ public class BlockRegistry {
         ((ModBlock)block_wicker).initModel();
         ((Block_Wood_Shingle)block_wood_shingle).initModel();
 
-        if (!Loader.isModLoaded("quark") || Config.persistantplanks == true) {
+        if (!Loader.isModLoaded("quark") || Config.persistantplanks) {
             ((Block_Planks_Vert)block_planks_vert).initModel();
         }
 
@@ -873,7 +872,7 @@ public class BlockRegistry {
 
         //  QUARK COMPAT    //
 
-        if (Config.quark == true) {
+        if (Config.quark) {
             ((ModRotatedPillar)block_reed).initModel();
             ((ModRotatedPillar)block_thatch).initModel();
 
